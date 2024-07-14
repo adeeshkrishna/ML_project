@@ -146,11 +146,14 @@ def main():
 
     pred=st.button(':orange[PREDICT]')
     if pred:
-        prediction=model.predict(scaler.transform([[age,j,ms,es,lds,account_balance,hs,ls,cm,contacted_day_of_month,m,duration_of_call,campaign_call,no_days_passed,previous_campaign_call]]))
-        if prediction==0:
-            st.write('#### Client will not subscribe to Term deposit :x:')
-        else:
-            st.write('#### Client will subscribe to Term deposit :white_check_mark:')
+        try:
+           prediction=model.predict(scaler.transform([[age,j,ms,es,lds,account_balance,hs,ls,cm,contacted_day_of_month,m,duration_of_call,campaign_call,no_days_passed,previous_campaign_call]]))
+           if prediction==0:
+              st.write('#### Client will not subscribe to Term deposit :x:')
+           else:
+              st.write('#### Client will subscribe to Term deposit :white_check_mark:')
+        except:
+            st.write('#### Make sure you have given all the necessary inputs :exclamation:')
 
 main()
 
