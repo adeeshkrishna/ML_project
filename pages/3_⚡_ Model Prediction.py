@@ -26,13 +26,11 @@ def add_bg_from_local(image_file):
     )
 
 if __name__ == '__main__':
-    add_bg_from_local('c8.png')
+    add_bg_from_local('c4.png')
 
 def main():
-    # st.title(':orange[PREDICTING THE SUCCESS OF BANK MARKETING EFFORTS] :male-technologist:')
-    # st.divider()
-    # st.write('###### Predicting the effect of bank marketing campaign on clients opting for term deposit :mag_right:')
-    st.image(Image.open('PEOBMC.png'))
+    st.title(':orange[PREDICTING THE SUCCESS OF BANK MARKETING EFFORTS] :male-technologist:')
+    # st.image(Image.open('PEOBMC.png'))
     st.write("- [Link to my ColabNotebook](https://colab.research.google.com/drive/1Qz3WPICFrmsGh1R6-gGz4F535T9U5Wov#scrollTo=rHLcmIvOVQxy)")
 
     # model=pickle.load(open('rf_model_1.sav','rb'))
